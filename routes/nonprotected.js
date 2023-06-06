@@ -8,7 +8,7 @@ const {Postmodel}=require("../model/postmodel")
 
 postrouter.get("/posts",async(req,res)=>{
     try {
-       let data=Postmodel.find({});
+       let data=await Postmodel.find({});
        res.send(data) 
     } catch (error) {
         res.send(error.message)
