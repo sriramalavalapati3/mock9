@@ -35,6 +35,10 @@ const options={
     },
     apis:["./routes/*.js"]
 }
+const spacs=swaggerjsdoc(options);
+app.use("/api-docs",swaggerui.serve,swaggerui.setup(spacs))
+
+
 
 app.use("/api",userrouter,postrouter)
 app.use(auth);
@@ -42,8 +46,7 @@ app.use("/api",Userrouter,Postrouter)
 
 
 
-const spacs=swaggerjsdoc(options);
-app.use("/api-docs",swaggerui.serve,swaggerui.setup(spacs))
+
 
 
 //=============================================================>
