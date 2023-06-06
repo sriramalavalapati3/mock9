@@ -1,3 +1,50 @@
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     users:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: string
+ *           description: "Id will be generated automatically"
+ *         name:
+ *           type: string
+ *           description: "Name of user"
+ *         email:
+ *           type: string
+ *           description: "User email"
+ *         address:
+ *           type: object
+ *           description: "User address"
+ *         password:
+ *           type: string
+ *           description: "User password"
+ *       required:
+ *         - name
+ *         - email
+ *         - address
+ *         - password
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const express = require("express")
 
 const Userrouter = express.Router();
